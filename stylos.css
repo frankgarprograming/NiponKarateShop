@@ -1,0 +1,105 @@
+body {
+    background-image: url('imagenes/fondoo.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+button, .btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #3b699f;
+    transform: scale(1.05);
+}
+.producto, form, .footer-link {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+#carrito {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#carrito-lista li {
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 0;
+}
+#carrito-lista li:last-child {
+    border-bottom: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.producto img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.producto img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+.footer-link {
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-link a {
+    color: #1e90ff;
+}
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+#modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+#modal img {
+    max-width: 90%;
+    border-radius: 8px;
+}
+
+#modal-description {
+    color: #fff;
+    margin-top: 1rem;
+}
+nav ul li a.active {
+    border-bottom: 2px solid #1e90ff;
+    color: #1e90ff;
+}
